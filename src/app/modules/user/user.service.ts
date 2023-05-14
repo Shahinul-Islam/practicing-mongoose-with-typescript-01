@@ -2,11 +2,11 @@ import { User } from "./user.model";
 
 export const createUserToDB =async ()=>{
     const user = await new User({
-      id:40,
+      id:4,
       role:"student",
       password:"nainai",
       name:{
-        firstName:"shakibul",
+        firstName:"asif",
         lastName:"islam",
       },
       dateOfBirth:"jun-01-1992",
@@ -18,7 +18,12 @@ export const createUserToDB =async ()=>{
       permanentAddress:"shalgaria",
     });
     await user.save();
-    console.log(user);
+    return (user);
+  }
+
+  export const getUserFromDB = async ()=>{
+    const users = User.find();
+    return users;
   }
 
 

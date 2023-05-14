@@ -15,4 +15,4 @@ app.use(express.urlencoded({extended:true}));
 // app.get('/api/v1/user',userRoute )
 app.use('/api/v1/user',userRoute )
 
-  export default app;
+export default app;
